@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: #CFA29F;
+            font-family: sans-serif;
+            font-size: medium;
+            color: #FFFFFF;
+        }
+
+        h1 {
+            font-size: 1.5em;
+        }
+
+        h2 {
+            font-size: 1.2em;
+        }
+
+        p {
+            text-align: justify;
+        }
+
+        a {
+            color: inherit; /* Herda a cor do pai (body) */
+            text-decoration: none; /* Remove sublinhado padrão */
+        }
+
+        a:hover {
+            text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+        }
+
+        .picture {
+            width: 100%;
+            max-width: 750px; /* Adaptação para telas menores */
+            margin: 0 auto; /* Centraliza a imagem */
+        }
+    </style>
+    <title>Portfólio</title>
+
+</head>
+<body>
+    <picture>
+        <source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imagens/foto-m.png" type="image/png">
+        <img src="imagens/Home (4).jpg" alt="Imagem">
+    </picture>
+
+    <h1>Meus Links</h1>
+    <h2>Curso CPDI - Bruna Nesi</h2>
+    <h3><a href="estudoslua.html" target="_self" rel="next">Estudos em LUA</a><br></h3>
+    <h3><a href="estudoshtml.html" target="_self" rel="next">Estudos em HTML/CSS</a></h3>
+    <h3><a href="projetofinal.html"target="_self" rel="next">Projeto Final</a></h3>
+    <h3><a href="projetosfora.html" target="_self" rel="next">Outros Projetos</a></h3>
+
+</body>
+</html>

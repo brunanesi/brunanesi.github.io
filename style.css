@@ -1,0 +1,392 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+:root { /* paleta de cor */
+    --color-primary:#ED4D1b;
+    --color--secondary: #FF9A3C;
+    --color-black: #000;
+    --color-white: #fff;
+
+}
+
+/* fundo do site */
+body { 
+    background: linear-gradient(90deg, #FFE7D1 0%, #FFF2E5 100%);
+    padding: 0 1rem;
+}
+
+/*cabeça, meio e footer*/
+header,
+.hero-section {
+    border-color: #000;
+    border-style: solid;
+    border-width: 0 1px 1px;
+    padding: 1.25rem;
+}
+
+header img {
+    display: block;
+    margin: 1rem auto;
+}
+
+header nav { /*cria duas colunas na barra de navegação*/
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 1rem auto 0;
+}
+
+nav a { /*links dentro do navegador e footer*/
+    color: #000;
+    font-size: 1.25 rem;
+    padding: .5rem;
+    text-decoration: none;
+}
+
+header nav a:nth-child(2n-1) { /*pegar elementos impares da coluna nav*/
+    text-align: right;
+}
+
+/*botoes*/
+.button {
+    background-color: var(--color-primary);
+    border: 2px solid var(--color-black);
+    box-shadow: 4px 4px 0 var(--color-black);
+    color: var(--color-black);
+    display: block;
+    font-size: 1.25rem;
+    padding: .75rem 1rem;
+    max-width: 14rem;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.hero-section {
+    padding-right: 0;
+    padding-bottom: 16rem;
+}
+
+.hero-section img {
+    display: block;
+    margin: 1.25rem 0 0 auto;
+    max-width: 100%;
+}
+
+h1 {
+    font-size: 3rem;
+    line-height: 105%;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+.hero-section p {
+    font-size: 1.25rem;
+    padding-right: 1.25rem;
+}
+
+.hero-section .button {
+    position: relative;
+}
+
+.hero-section .button::after {
+    content: '';
+    background: url(img/arrow-curve.svg);
+    position: absolute;
+    top: 5rem;
+    right: -4rem;
+    height: 48px;
+    width: 132px;
+}
+.about-section {
+    padding-right: 0;
+    padding-top: 3rem;
+    padding-bottom: 8rem;   
+}
+.decoration {
+    display: block;
+    position: relative;
+}
+
+.decoration::after {
+    content: '';
+    background: url(img/three-dashes.svg);
+    position: absolute;
+    top: -0.85rem;
+    height: 36px;
+    width: 20px;
+}
+
+
+/*fases*/
+.courses-sectiom {
+    padding-bottom: 8rem;
+}
+
+/*cartões*/
+.cards {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1.25rem;
+    margin-top: -8rem;
+    margin-bottom: 4rem;
+}
+
+.card {
+    background-color: var(--color-primary);
+    border: 2px solid var(--color-black);
+    box-shadow: 4px 4px 0 var(--color-black);
+    max-width: 20rem;
+    padding: 2rem 2rem 0 2rem;
+}
+
+.card:nth-child(2n) {
+    align-self: end;
+    background-color: var(--color--secondary);
+}
+
+.card strong {
+    display: block;
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+
+.card a {
+    display: block;
+    margin: 3rem 0 0 auto;
+    width: fit-content;/*botão alinhado no fim do card*/
+}
+
+/* gameplay */
+
+/* galeria de foto */
+
+.photo-section {
+    column-count: 2;
+    column-gap: 10px;
+  
+}
+
+.photo-section img {
+    width: 100%;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+/*desenvolvedores*/
+
+.dev-section {
+    padding-right: 0;
+    padding-bottom: 10rem;
+    padding-top: 0.3rem;
+    font-size: 1.0rem;
+}
+
+.dev-section h1 {
+    font-size: 1.9rem;
+    align-items: center;
+}
+
+.devs {
+    background-color:#ed4c1b40;
+    border: 2px solid var(--color-black);
+    box-shadow: 4px 4px 0 var(--color-black);
+    min-width: 20rem;
+    max-width: 20rem;
+    min-height: 22rem;
+    padding: 2rem 2rem 0 2rem;
+}
+
+.devs:nth-child(2n) {
+    align-self: end;
+    background-color: #ff9a3c54;
+}
+
+.devs strong {
+    display: block;
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+
+.devs a {
+    display: block;
+    margin: 3rem 0 0 auto;
+    width: fit-content;/*botão alinhado no fim do card*/
+}
+
+/*rodapé*/
+
+footer{
+    background-color:#ff9a3c1f;
+    border-bottom: 1;
+    padding: 1rem 1.25rem 4rem;
+}
+footer a {
+    text-decoration: none;
+    color: #000;
+}
+
+footer a:hover{
+    text-decoration: underline;
+}
+footer nav a {
+    display: block;
+    padding: 1;
+    font-weight: bold;
+
+}
+
+.newsletter label {
+    display: block;
+    font-size: 1.5rem;
+}
+
+.newsletter input {
+    border: 2px solid var(--color-black);
+    box-shadow: 4px 4px 0 var(--color-black);
+    font-size: 1.5rem;
+    padding: .5rem;
+    width: 100%;
+}
+
+/*organização básica da página -  utilitarios */
+
+.mt-0 {
+    margin-top: -8rem;
+}
+.mt-1 {
+    margin-top: 1rem;
+}
+
+.mt-2 {
+    margin-bottom: 2rem;
+}
+
+.mb-1 {
+    margin-bottom: 1rem;
+}
+
+.mb-2 {
+    margin-bottom: 2rem;
+}
+
+.mx-wd {
+    max-width: 20rem;
+}
+
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.text-primary {
+  color:var(--color-primary)
+}
+
+.text-bold {
+    color: black;
+    font-weight: bolder;
+    font-style: italic;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-column {
+    column-count: 2;
+}
+
+.img-left {
+    margin-left: 60%;
+    min-width: 100px;
+    min-height: 100px;
+    margin-bottom: -1.5rem;
+}
+
+/*resposividade */
+
+@media screen and (min-width: 40rem) {
+    header nav {
+        display: block;
+        text-align: center;
+    }
+
+    .cards {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .dev-section{
+        display: block;
+        text-align: center;
+    }
+
+    .photo-section {
+        padding-left: 20%;
+        padding-right: 20%;
+    }
+
+    .play-section {
+        padding-left: 20%;
+        padding-right: 20%;
+    }
+}
+
+.card:nth-child(2n) {
+    margin-top: 1rem;
+}
+
+@media screen and (min-width:48rem) {
+    header div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    header img,
+    header nav,
+    header .button {
+        margin: 0;
+    }
+}
+
+@media screen and (min-width: 72rem) {
+    .container {
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+        max-width: 72rem;
+    }
+
+    .container.row-reverse {
+        flex-direction: row-reverse;
+    }
+
+    .about-column {
+        flex:2;
+
+    }
+
+    .about-column p {
+        font-size: 1rem;
+        max-width: 25rem;
+    }
+
+    footer nav {
+        flex: 1;
+        font-size: 1.15rem;
+
+    }
+
+    .newsletter-form {
+        flex:3;
+    }
+
+}
